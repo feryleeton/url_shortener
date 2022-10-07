@@ -25,7 +25,7 @@ class UrlUpdateAPIView(generics.UpdateAPIView):
     lookup_field = 'slug'
 
 
-class UrlCreateAPIView(generics.ListCreateAPIView):
+class UrlCreateAPIView(generics.CreateAPIView):
     queryset = services.get_urls()
     serializer_class = serializers.UrlSerializer
     permission_classes = [IsAuthenticated, ]
